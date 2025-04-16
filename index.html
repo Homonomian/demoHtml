@@ -1,10 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cybersecurity Resources</title>
+  <style>
+    /* Solid background color */
+    body {
+      background-color: #0b3d91; /* deep blue */
+      color: #f0f4f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #ffd700; /* gold accent */
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      display: block;
+      max-width: 400px;
+      margin: 20px auto;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+    button {
+      background-color: #ffcc00;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0b3d91;
+      border-radius: 6px;
+      cursor: pointer;
+      display: block;
+      margin: 30px auto;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e6b800;
+    }
+  </style>
+</head>
 <body>
 
-<h1>Hello!</h1>
+  <h1>Cybersecurity, Digital Forensics & Incident Response Resources</h1>
 
-<p>Homonomian Here.</p>
+  <img src="https://images.unsplash.com/photo-1550751827-4e60a2f0b62a?auto=format&fit=crop&w=600&q=80" alt="Cybersecurity illustration" />
+
+  <p>Welcome to your hub for the latest and greatest resources on <strong>Cybersecurity</strong>, <strong>Digital Forensics</strong>, and <strong>Incident Response</strong>. Explore trusted links, tools, and guides to stay ahead in the security landscape.</p>
+
+  <p>Check out the <a href="https://www.sans.org" target="_blank" rel="noopener noreferrer">SANS Institute</a> for comprehensive training and research on cybersecurity.</p>
+
+  <button id="alertButton">Click me for a tip!</button>
+
+  <script>
+    // JavaScript OnClick event to show a cybersecurity tip
+    document.getElementById('alertButton').onclick = function() {
+      alert('Remember: Always keep your software updated to protect against vulnerabilities!');
+    };
+  </script>
 
 </body>
 </html>
