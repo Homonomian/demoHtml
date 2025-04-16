@@ -3,18 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cybersecurity & Digital Forensics Resources</title>
+  <title>Cybersecurity, DFIR & Incident Response Resources</title>
   <style>
-    /* Reset and base styles */
-    * {
-      box-sizing: border-box;
-    }
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #121b2a; /* dark navy */
+      background-color: #121b2a;
       color: #e1e8f0;
-      line-height: 1.6;
+      line-height: 1.7;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -23,13 +19,13 @@
     }
     header {
       text-align: center;
-      max-width: 900px;
+      max-width: 950px;
       margin-bottom: 40px;
     }
     header h1 {
-      font-size: 3rem;
-      color: #00bcd4; /* cyan */
-      margin-bottom: 0.2em;
+      font-size: 2.7rem;
+      color: #00bcd4;
+      margin-bottom: 0.3em;
       text-shadow: 0 0 8px #00bcd4aa;
     }
     header p {
@@ -40,7 +36,7 @@
     nav {
       margin: 20px 0 40px;
       display: flex;
-      gap: 20px;
+      gap: 18px;
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -59,22 +55,24 @@
       outline: none;
     }
     main {
-      max-width: 900px;
+      max-width: 950px;
       width: 100%;
       background: #1e2a43;
       border-radius: 12px;
-      padding: 30px;
+      padding: 32px;
       box-shadow: 0 0 20px #00bcd488;
+      margin-bottom: 30px;
     }
     section {
-      margin-bottom: 40px;
+      margin-bottom: 38px;
     }
     section h2 {
       color: #00e5ff;
       border-bottom: 2px solid #00bcd4;
       padding-bottom: 6px;
-      margin-bottom: 20px;
-      font-size: 2rem;
+      margin-bottom: 18px;
+      font-size: 1.6rem;
+      letter-spacing: 0.5px;
     }
     section ul {
       list-style-type: none;
@@ -82,7 +80,7 @@
     }
     section ul li {
       margin-bottom: 15px;
-      font-size: 1.1rem;
+      font-size: 1.08rem;
     }
     section ul li a {
       color: #80d8ff;
@@ -91,6 +89,12 @@
     section ul li a:hover {
       text-decoration: underline;
     }
+    .resource-desc {
+      color: #b3c7e6;
+      font-size: 0.98rem;
+      margin-left: 10px;
+      font-style: italic;
+    }
     img.resource-image {
       display: block;
       max-width: 100%;
@@ -98,16 +102,10 @@
       margin: 20px auto 40px;
       box-shadow: 0 0 15px #00bcd4aa;
     }
-    footer {
-      margin-top: auto;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #607d8b;
+    .tips-section {
       text-align: center;
-      width: 100%;
-      max-width: 900px;
+      margin-bottom: 38px;
     }
-    /* Button styles */
     button {
       background-color: #00bcd4;
       border: none;
@@ -117,22 +115,101 @@
       font-weight: 700;
       border-radius: 8px;
       cursor: pointer;
-      display: block;
-      margin: 0 auto;
+      margin: 16px auto 0;
       box-shadow: 0 4px 8px #00bcd488;
       transition: background-color 0.3s ease;
+      display: block;
     }
     button:hover, button:focus {
       background-color: #0097a7;
       outline: none;
     }
-    /* Responsive */
+    /* Contact Section */
+    .contact-info {
+      background: #16203a;
+      border-radius: 10px;
+      padding: 18px 24px;
+      margin-bottom: 28px;
+      box-shadow: 0 0 8px #00bcd455;
+      color: #e1e8f0;
+      font-size: 1.07rem;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact-info strong {
+      color: #00bcd4;
+    }
+    /* Contact Form */
+    .contact-form {
+      background: #16203a;
+      border-radius: 10px;
+      padding: 22px 28px;
+      max-width: 520px;
+      margin: 0 auto 30px;
+      box-shadow: 0 0 10px #00bcd433;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #00e5ff;
+      letter-spacing: 0.2px;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 9px 10px;
+      margin-bottom: 18px;
+      border-radius: 6px;
+      border: 1px solid #3b4b6d;
+      background: #22304d;
+      color: #e1e8f0;
+      font-size: 1rem;
+      resize: vertical;
+      transition: border-color 0.2s;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+      border-color: #00bcd4;
+      outline: none;
+    }
+    .contact-form button {
+      margin-top: 5px;
+      width: 100%;
+    }
+    .contact-form .form-message {
+      margin-bottom: 12px;
+      color: #ffb300;
+      font-size: 1rem;
+      min-height: 1.3em;
+      text-align: center;
+    }
+    .contact-form .form-success {
+      color: #00e676;
+    }
+    .contact-form .form-error {
+      color: #ff5252;
+    }
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      font-size: 0.95rem;
+      color: #607d8b;
+      text-align: center;
+      width: 100%;
+      max-width: 950px;
+    }
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
       }
       section h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+      }
+      main {
+        padding: 10px;
+      }
+      .contact-form, .contact-info {
+        padding: 12px 5px;
       }
     }
   </style>
@@ -140,8 +217,10 @@
 <body>
 
   <header>
-    <h1>Cybersecurity & Digital Forensics Resources</h1>
-    <p>Your trusted guide to Cybersecurity, Digital Forensics, and Incident Response knowledge.</p>
+    <h1>Cybersecurity, Digital Forensics & Incident Response Resources</h1>
+    <p>
+      Curated by <strong>Homonomian</strong> | Your trusted guide to learning, tools, and best practices in cybersecurity, DFIR, and more.
+    </p>
   </header>
 
   <nav aria-label="Primary resource links">
@@ -149,6 +228,7 @@
     <a href="#digital-forensics" tabindex="0">Digital Forensics</a>
     <a href="#incident-response" tabindex="0">Incident Response</a>
     <a href="#tools" tabindex="0">Tools & Tutorials</a>
+    <a href="#contact" tabindex="0">Contact</a>
   </nav>
 
   <img 
@@ -158,53 +238,163 @@
   />
 
   <main>
-
     <section id="cybersecurity" tabindex="0">
       <h2>Cybersecurity Resources</h2>
       <ul>
-        <li><a href="https://www.sans.org" target="_blank" rel="noopener noreferrer">SANS Institute</a> – Industry-leading cybersecurity training and certifications.</li>
-        <li><a href="https://www.cisa.gov/cybersecurity" target="_blank" rel="noopener noreferrer">CISA Cybersecurity</a> – U.S. Cybersecurity & Infrastructure Security Agency resources and alerts.</li>
-        <li><a href="https://www.cybrary.it" target="_blank" rel="noopener noreferrer">Cybrary</a> – Free and paid cybersecurity courses and labs.</li>
-        <li><a href="https://www.krebssecurity.com" target="_blank" rel="noopener noreferrer">Krebs on Security</a> – Expert cybersecurity news and analysis.</li>
+        <li>
+          <a href="https://www.sans.org" target="_blank" rel="noopener noreferrer">SANS Institute</a>
+          <span class="resource-desc">– Industry-leading training, research, and certifications in cybersecurity, blue teaming, and incident response.</span>
+        </li>
+        <li>
+          <a href="https://www.cisa.gov/cybersecurity" target="_blank" rel="noopener noreferrer">CISA Cybersecurity</a>
+          <span class="resource-desc">– Alerts, best practices, and tools from the US Cybersecurity & Infrastructure Security Agency.</span>
+        </li>
+        <li>
+          <a href="https://www.cybrary.it" target="_blank" rel="noopener noreferrer">Cybrary</a>
+          <span class="resource-desc">– Free and paid courses, hands-on labs, and career paths in cybersecurity.</span>
+        </li>
+        <li>
+          <a href="https://www.krebssecurity.com" target="_blank" rel="noopener noreferrer">Krebs on Security</a>
+          <span class="resource-desc">– In-depth news and analysis by journalist Brian Krebs.</span>
+        </li>
+        <li>
+          <a href="https://www.darkreading.com" target="_blank" rel="noopener noreferrer">Dark Reading</a>
+          <span class="resource-desc">– Latest cybersecurity news, threat intelligence, and technical insights.</span>
+        </li>
+        <li>
+          <a href="https://www.securityweek.com" target="_blank" rel="noopener noreferrer">SecurityWeek</a>
+          <span class="resource-desc">– News, analysis, and opinion on enterprise security.</span>
+        </li>
+        <li>
+          <a href="https://www.reddit.com/r/netsec/" target="_blank" rel="noopener noreferrer">Reddit /r/netsec</a>
+          <span class="resource-desc">– Community-driven news and discussions for security professionals.</span>
+        </li>
       </ul>
     </section>
 
     <section id="digital-forensics" tabindex="0">
       <h2>Digital Forensics Resources</h2>
       <ul>
-        <li><a href="https://www.forensicmag.com" target="_blank" rel="noopener noreferrer">Forensic Magazine</a> – News and articles on digital forensics technology and techniques.</li>
-        <li><a href="https://www.digitalforensics.com" target="_blank" rel="noopener noreferrer">Digital Forensics Corp</a> – Professional consulting and forensic services.</li>
-        <li><a href="https://www.coursera.org/learn/digital-forensics" target="_blank" rel="noopener noreferrer">Coursera Digital Forensics Course</a> – Online course by top universities.</li>
-        <li><a href="https://www.nist.gov/programs-projects/digital-forensics" target="_blank" rel="noopener noreferrer">NIST Digital Forensics</a> – Standards and guidelines from the National Institute of Standards and Technology.</li>
+        <li>
+          <a href="https://www.forensicmag.com" target="_blank" rel="noopener noreferrer">Forensic Magazine</a>
+          <span class="resource-desc">– News, articles, and case studies on digital forensics and investigations.</span>
+        </li>
+        <li>
+          <a href="https://www.digitalforensics.com" target="_blank" rel="noopener noreferrer">Digital Forensics Corp</a>
+          <span class="resource-desc">– Professional consulting, casework, and educational resources.</span>
+        </li>
+        <li>
+          <a href="https://www.coursera.org/learn/digital-forensics" target="_blank" rel="noopener noreferrer">Coursera: Digital Forensics</a>
+          <span class="resource-desc">– University-led online course covering core DFIR concepts.</span>
+        </li>
+        <li>
+          <a href="https://www.nist.gov/programs-projects/digital-forensics" target="_blank" rel="noopener noreferrer">NIST Digital Forensics</a>
+          <span class="resource-desc">– Standards, guidelines, and research from NIST.</span>
+        </li>
+        <li>
+          <a href="https://www.forensicfocus.com/" target="_blank" rel="noopener noreferrer">Forensic Focus</a>
+          <span class="resource-desc">– Forums, articles, and webinars for DFIR professionals.</span>
+        </li>
+        <li>
+          <a href="https://www.sleuthkit.org/" target="_blank" rel="noopener noreferrer">The Sleuth Kit & Autopsy</a>
+          <span class="resource-desc">– Open-source digital forensics tools for file and volume analysis.</span>
+        </li>
       </ul>
     </section>
 
     <section id="incident-response" tabindex="0">
       <h2>Incident Response Resources</h2>
       <ul>
-        <li><a href="https://www.incidentresponse.com" target="_blank" rel="noopener noreferrer">Incident Response</a> – Best practices, frameworks, and case studies.</li>
-        <li><a href="https://www.cert.org/incident-management/" target="_blank" rel="noopener noreferrer">CERT Incident Management</a> – Carnegie Mellon University’s CERT Coordination Center.</li>
-        <li><a href="https://www.sans.org/incident-response" target="_blank" rel="noopener noreferrer">SANS Incident Response</a> – Training and research on incident handling.</li>
-        <li><a href="https://www.us-cert.gov/ics/Incident-Response" target="_blank" rel="noopener noreferrer">US-CERT ICS Incident Response</a> – Industrial Control Systems incident response resources.</li>
+        <li>
+          <a href="https://www.incidentresponse.com" target="_blank" rel="noopener noreferrer">Incident Response</a>
+          <span class="resource-desc">– Best practices, frameworks, and case studies on IR.</span>
+        </li>
+        <li>
+          <a href="https://www.cert.org/incident-management/" target="_blank" rel="noopener noreferrer">CERT Incident Management</a>
+          <span class="resource-desc">– Guidance and resources from Carnegie Mellon’s CERT/CC.</span>
+        </li>
+        <li>
+          <a href="https://www.sans.org/incident-response" target="_blank" rel="noopener noreferrer">SANS Incident Response</a>
+          <span class="resource-desc">– Training, whitepapers, and research on IR and threat hunting.</span>
+        </li>
+        <li>
+          <a href="https://www.us-cert.gov/ics/Incident-Response" target="_blank" rel="noopener noreferrer">US-CERT ICS Incident Response</a>
+          <span class="resource-desc">– Incident response for industrial control systems and OT.</span>
+        </li>
+        <li>
+          <a href="https://attack.mitre.org/" target="_blank" rel="noopener noreferrer">MITRE ATT&CK</a>
+          <span class="resource-desc">– Knowledge base of adversary tactics and techniques for detection and response.</span>
+        </li>
+        <li>
+          <a href="https://www.first.org/" target="_blank" rel="noopener noreferrer">FIRST.org</a>
+          <span class="resource-desc">– Global incident response teams and coordination.</span>
+        </li>
       </ul>
     </section>
 
     <section id="tools" tabindex="0">
       <h2>Tools & Tutorials</h2>
       <ul>
-        <li><a href="https://www.wireshark.org" target="_blank" rel="noopener noreferrer">Wireshark</a> – Network protocol analyzer for traffic inspection.</li>
-        <li><a href="https://www.autopsy.com" target="_blank" rel="noopener noreferrer">Autopsy</a> – Open-source digital forensics platform.</li>
-        <li><a href="https://www.osquery.io" target="_blank" rel="noopener noreferrer">osquery</a> – SQL-powered operating system instrumentation tool.</li>
-        <li><a href="https://www.hacker101.com" target="_blank" rel="noopener noreferrer">Hacker101</a> – Free web security class and CTF challenges.</li>
+        <li>
+          <a href="https://www.wireshark.org" target="_blank" rel="noopener noreferrer">Wireshark</a>
+          <span class="resource-desc">– Network protocol analyzer for traffic inspection and troubleshooting.</span>
+        </li>
+        <li>
+          <a href="https://www.autopsy.com" target="_blank" rel="noopener noreferrer">Autopsy</a>
+          <span class="resource-desc">– Open-source digital forensics platform for hard drive and smartphone analysis.</span>
+        </li>
+        <li>
+          <a href="https://www.osquery.io" target="_blank" rel="noopener noreferrer">osquery</a>
+          <span class="resource-desc">– SQL-powered endpoint visibility and monitoring.</span>
+        </li>
+        <li>
+          <a href="https://www.hacker101.com" target="_blank" rel="noopener noreferrer">Hacker101</a>
+          <span class="resource-desc">– Free web security class and CTF challenges.</span>
+        </li>
+        <li>
+          <a href="https://www.magnetforensics.com/resources/" target="_blank" rel="noopener noreferrer">Magnet Forensics Resources</a>
+          <span class="resource-desc">– Webinars, whitepapers, and toolkits for DFIR.</span>
+        </li>
+        <li>
+          <a href="https://www.cyberseek.org/pathway.html" target="_blank" rel="noopener noreferrer">CyberSeek Career Pathways</a>
+          <span class="resource-desc">– Interactive tool for exploring cybersecurity career paths and certifications.</span>
+        </li>
       </ul>
     </section>
 
-    <button id="tipButton" aria-label="Show cybersecurity tip">Show Cybersecurity Tip</button>
+    <section class="tips-section">
+      <h2>Interactive: Cybersecurity Tips</h2>
+      <button id="tipButton" aria-label="Show cybersecurity tip">Show a Cybersecurity Tip</button>
+      <div id="tipDisplay" style="margin-top:18px;font-size:1.15rem;color:#ffd740;min-height:2em;"></div>
+    </section>
 
+    <section id="contact" tabindex="0">
+      <h2>Contact</h2>
+      <div class="contact-info">
+        <p><strong>Username:</strong> Homonomian</p>
+        <p><strong>Email:</strong> <a href="mailto:deanwinchesterdark@proton.me" style="color:#80d8ff;">deanwinchesterdark@proton.me</a></p>
+        <p>Feel free to reach out for collaboration, questions, or feedback!</p>
+      </div>
+      <form class="contact-form" id="contactForm" method="POST" action="https://formspree.io/f/manezqqp">
+        <!-- Replace /f/your-form-id with your Formspree form endpoint after signup -->
+        <div class="form-message" id="formMessage"></div>
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required maxlength="50" autocomplete="name" />
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required maxlength="60" autocomplete="email" />
+        <label for="query">Your Query *</label>
+        <textarea id="query" name="query" rows="5" required maxlength="1000"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p style="color:#b3c7e6;font-size:0.97rem;max-width:520px;margin:0 auto;text-align:center;">
+        This form securely sends your query to <strong>deanwinchesterdark@proton.me</strong> via Formspree.<br>
+        <span style="font-size:0.93em;">(You must set up your free Formspree account and update the <code>action</code> URL with your unique form endpoint.)</span>
+      </p>
+    </section>
   </main>
 
   <footer>
-    &copy; 2025 Cybersecurity Resources. Designed to empower and educate.
+    &copy; 2025 Homonomian | Cybersecurity & DFIR Resources. Designed to empower, educate, and connect the security community.
   </footer>
 
   <script>
@@ -217,13 +407,47 @@
       "Monitor network traffic for unusual activity.",
       "Have an incident response plan and practice it regularly.",
       "Encrypt sensitive data both in transit and at rest.",
-      "Use endpoint protection and keep antivirus software updated."
+      "Use endpoint protection and keep antivirus software updated.",
+      "Limit user privileges and use the principle of least privilege.",
+      "Educate your team about social engineering attacks.",
+      "Segment your network to reduce attack surface.",
+      "Review and update your security policies regularly.",
+      "Log and monitor all critical systems for anomalies.",
+      "Test your backups and disaster recovery plans.",
+      "Disable unused services and ports on all devices."
     ];
 
     // Function to show a random tip on button click
     document.getElementById('tipButton').addEventListener('click', () => {
       const randomTip = tips[Math.floor(Math.random() * tips.length)];
-      alert(`💡 Cybersecurity Tip:\n\n${randomTip}`);
+      document.getElementById('tipDisplay').textContent = "💡 " + randomTip;
+    });
+
+    // Contact form validation and feedback
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const query = document.getElementById('query').value.trim();
+      const messageEl = document.getElementById('formMessage');
+      messageEl.className = 'form-message';
+      if (!name || !email || !query) {
+        e.preventDefault();
+        messageEl.textContent = "All fields are required.";
+        messageEl.classList.add('form-error');
+        return false;
+      }
+      // Simple email validation
+      const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+      if (!emailPattern.test(email)) {
+        e.preventDefault();
+        messageEl.textContent = "Please enter a valid email address.";
+        messageEl.classList.add('form-error');
+        return false;
+      }
+      messageEl.textContent = "Sending...";
+      messageEl.classList.remove('form-error');
+      messageEl.classList.add('form-success');
+      // Allow form to submit to Formspree
     });
   </script>
 
